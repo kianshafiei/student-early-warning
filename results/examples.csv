@@ -1,0 +1,11 @@
+risk,outcome,reasons
+0.97,did not complete,1 assessment(s) not submitted; less active than 96% of the cohort
+0.83,did not complete,1 assessment(s) not submitted; no marked assessment yet
+0.82,did not complete,1 assessment(s) not submitted; no marked assessment yet
+0.85,did not complete,fewer active days than 99% of the cohort; less active than 99% of the cohort
+0.92,did not complete,average assessment score 44%; fewer active days than 84% of the cohort
+0.96,did not complete,1 assessment(s) not submitted; less active than 96% of the cohort
+0.93,completed,average assessment score 33%; 1 assessment(s) not submitted
+0.88,did not complete,average assessment score 35%; 1 assessment(s) not submitted
+0.96,did not complete,1 assessment(s) not submitted; no learning-platform activity for 68 days
+0.84,completed,less active than 95% of the cohort; fewer active days than 98% of the cohort

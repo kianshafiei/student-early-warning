@@ -1,0 +1,225 @@
+{
+  "train_cohorts": [
+    "2013B",
+    "2013J",
+    "2014B"
+  ],
+  "test_cohorts": [
+    "2014J"
+  ],
+  "capacity": 0.1,
+  "train_rows": 348180,
+  "test_rows": 175206,
+  "test_students": 9757,
+  "bootstrap_week6": {
+    "not_completing": {
+      "pr_auc_gb_minus_lr": [
+        0.0025,
+        [
+          -0.0027,
+          0.0086
+        ]
+      ],
+      "pr_auc_gbdemo_minus_gb": [
+        0.0085,
+        [
+          0.0036,
+          0.0126
+        ]
+      ],
+      "precision_gb_minus_rule_at_rule_volume": [
+        0.0938,
+        [
+          0.0748,
+          0.1107
+        ]
+      ]
+    },
+    "withdrew": {
+      "pr_auc_gb_minus_lr": [
+        -0.0142,
+        [
+          -0.028,
+          -0.0015
+        ]
+      ],
+      "pr_auc_gbdemo_minus_gb": [
+        0.006,
+        [
+          -0.0076,
+          0.0191
+        ]
+      ],
+      "precision_gb_minus_rule_at_rule_volume": [
+        0.0321,
+        [
+          0.0121,
+          0.0504
+        ]
+      ]
+    }
+  },
+  "data_quality_check": {
+    "with check": {
+      "auc_week6_all": 0.7777898974091515,
+      "auc_week6_BBB": 0.6880190219814517,
+      "BBB_mean_predicted": 0.4301469995570802,
+      "BBB_actual_rate": 0.35098591549295777
+    },
+    "without check": {
+      "auc_week6_all": 0.7544873467471336,
+      "auc_week6_BBB": 0.6279329967005529,
+      "BBB_mean_predicted": 0.5360527902225359,
+      "BBB_actual_rate": 0.35098591549295777
+    }
+  },
+  "lead_time": {
+    "Rule": {
+      "dropouts_weeks_2_20": 2097,
+      "share_flagged_before_dropout": 0.622,
+      "median_days_warning": 20.0,
+      "flags_raised": 44927
+    },
+    "Dropout model, same weekly volume as rule": {
+      "dropouts_weeks_2_20": 2097,
+      "share_flagged_before_dropout": 0.586,
+      "median_days_warning": 25.0,
+      "flags_raised": 44927
+    },
+    "Dropout model, top 10% each week": {
+      "dropouts_weeks_2_20": 2097,
+      "share_flagged_before_dropout": 0.454,
+      "median_days_warning": 19.0,
+      "flags_raised": 17531
+    }
+  },
+  "calibration_week6_max_gap": 0.038,
+  "importance_top10": {
+    "n_missed": 0.509,
+    "mean_score": 0.487,
+    "cutoff": 0.237,
+    "days_since_last": 0.197,
+    "active_days_pct_in_cohort": 0.189,
+    "clicks_pct_in_cohort": 0.144,
+    "min_score": 0.121,
+    "n_submitted_due": 0.111,
+    "n_late": 0.103,
+    "n_activity_types": 0.084
+  },
+  "week6_not_completing": {
+    "Logistic regression": {
+      "students": 9043,
+      "base_rate": 0.3965,
+      "auc": 0.7756,
+      "pr_auc": 0.7259,
+      "prec@10%": 0.9061,
+      "rec@10%": 0.2287,
+      "prec@rule_volume": 0.7695,
+      "rec@rule_volume": 0.4208,
+      "brier": 0.1827,
+      "flag_share": NaN,
+      "precision": NaN,
+      "recall": NaN
+    },
+    "Gradient boosting": {
+      "students": 9043,
+      "base_rate": 0.3965,
+      "auc": 0.7778,
+      "pr_auc": 0.7284,
+      "prec@10%": 0.9061,
+      "rec@10%": 0.2287,
+      "prec@rule_volume": 0.7761,
+      "rec@rule_volume": 0.4244,
+      "brier": 0.1818,
+      "flag_share": NaN,
+      "precision": NaN,
+      "recall": NaN
+    },
+    "Gradient boosting + demographics": {
+      "students": 9043,
+      "base_rate": 0.3965,
+      "auc": 0.7858,
+      "pr_auc": 0.737,
+      "prec@10%": 0.9215,
+      "rec@10%": 0.2326,
+      "prec@rule_volume": 0.7782,
+      "rec@rule_volume": 0.4255,
+      "brier": 0.1795,
+      "flag_share": NaN,
+      "precision": NaN,
+      "recall": NaN
+    },
+    "Rule": {
+      "students": 9043,
+      "base_rate": 0.3965,
+      "auc": NaN,
+      "pr_auc": NaN,
+      "prec@10%": NaN,
+      "rec@10%": NaN,
+      "prec@rule_volume": NaN,
+      "rec@rule_volume": NaN,
+      "brier": NaN,
+      "flag_share": 0.2169,
+      "precision": 0.6823,
+      "recall": 0.3731
+    }
+  },
+  "week6_withdrew": {
+    "Logistic regression": {
+      "students": 9043,
+      "base_rate": 0.1779,
+      "auc": 0.7011,
+      "pr_auc": 0.3674,
+      "prec@10%": 0.4751,
+      "rec@10%": 0.2672,
+      "prec@rule_volume": 0.359,
+      "rec@rule_volume": 0.4375,
+      "brier": 0.1343,
+      "flag_share": NaN,
+      "precision": NaN,
+      "recall": NaN
+    },
+    "Gradient boosting": {
+      "students": 9043,
+      "base_rate": 0.1779,
+      "auc": 0.6914,
+      "pr_auc": 0.3533,
+      "prec@10%": 0.4442,
+      "rec@10%": 0.2498,
+      "prec@rule_volume": 0.3524,
+      "rec@rule_volume": 0.4295,
+      "brier": 0.135,
+      "flag_share": NaN,
+      "precision": NaN,
+      "recall": NaN
+    },
+    "Gradient boosting + demographics": {
+      "students": 9043,
+      "base_rate": 0.1779,
+      "auc": 0.6918,
+      "pr_auc": 0.3592,
+      "prec@10%": 0.4331,
+      "rec@10%": 0.2436,
+      "prec@rule_volume": 0.3406,
+      "rec@rule_volume": 0.4152,
+      "brier": 0.1344,
+      "flag_share": NaN,
+      "precision": NaN,
+      "recall": NaN
+    },
+    "Rule": {
+      "students": 9043,
+      "base_rate": 0.1779,
+      "auc": NaN,
+      "pr_auc": NaN,
+      "prec@10%": NaN,
+      "rec@10%": NaN,
+      "prec@rule_volume": NaN,
+      "rec@rule_volume": NaN,
+      "brier": NaN,
+      "flag_share": 0.2169,
+      "precision": 0.3202,
+      "recall": 0.3903
+    }
+  }
+}
